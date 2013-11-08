@@ -1,0 +1,37 @@
+<!-- This is the homepage of the club website -->
+<!--{{block head}}
+  {{response.files.append(URL('static', 'css/index.css'))}}
+  {{include 'web2py_ajax.html'}}
+{{end}}
+
+<div id="header">
+  <p id="title1">University of California Santa Cruz</p>
+  <p id="title2">Tennis Club</p>
+</div>
+
+<!-- load the navigation -->
+{{extend 'my_layout.html'}}
+<!--                     -->
+
+<!-- code after navigation -->
+{{block body}}
+  <!--
+  <img id="image_homepage" src="{{=URL(r=request,c='static/images',f='tennis_team_picture.jpg')}}"/>
+  --> 
+
+<div id="welcome">
+  <div id="welcome_text">
+    <h1 style="font-size:24px">Welcome</h1>
+    <p>This club was started to help competitive, experienced players find other people to hit with and grow as players.</p>
+    <p>We are a competitive co-ed team. We practice Monday - Friday at 5:30 at the west field house courts. We travel to tournaments through out the quarter. We  have parties/dinners throught out the year aswell!!</p>
+  </div>
+<div>
+<div id="post">
+  <img id="image_homepage" src="{{=URL(r=request,c='static/images',f='tennis_team_picture.jpg')}}"/>
+</div>  
+<div id="news">
+  <h1 style="font-size:24px">News/tournaments</h1>
+  <p>Next tournament is November 2nd at Saint Mary's College</p>
+  <p>Sectionals is November 9th/10th</p>  
+</div>
+{{end}}

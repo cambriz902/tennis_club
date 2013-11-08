@@ -1,0 +1,45 @@
+/*This is the css for the index(home) page of the site*/
+#header {
+	height:150px;
+	background-color: #00458c;
+	text-align: center;
+}
+#title1 {
+	color: #FFFFFF;
+	font-size: 50px;
+	position:relative; top: 15px;
+}
+#title2 {
+	color: #FFFFFF;
+	font-size: 50px;
+	position:relative; bottom: 25px;
+}
+#image_homepage {
+	height: 300px;
+	width: 450px;
+	padding: 0px;
+	border: solid #f2f2f2;
+  border-bottom: 8px solid #ccc; 
+  border-top: 8px solid #ccc; ;
+	position:relative; bottom: 300px;
+}
+#welcome {
+	width: 250px;
+	position:relative; left: 0px;
+	position:relative; top: 0px;
+}
+#welcome_text {
+	position:relative; top: -40px;
+}
+#post {
+	position:absolute; left: 100%;
+	width: 200%;
+}
+#news {
+	background-size: 250px 300px;
+	overflow: auto;
+	position:absolute; left: 725px;
+	position:absolute; bottom: 0px;
+	width: 250px;
+	height:300px;
+}

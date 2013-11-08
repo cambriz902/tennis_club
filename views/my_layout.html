@@ -1,0 +1,35 @@
+<head>
+  {{response.files.append(URL('static', 'css/my_layout.css'))}}
+  {{include 'web2py_ajax.html'}}
+  {{block head}}{{end}}
+</head>
+
+<body>
+    
+<div id="header">
+  <p id="title1">University of California Santa Cruz</p>
+  <p id="title2">Tennis Club</p>
+</div>
+
+<div id="wrap">
+
+   <!-- Here's all it takes to make this navigation bar. -->
+   <ul id="nav">
+      <li>{{=LI(A('Home', _href=URL("index")))}}</li>
+      <li>{{=LI(A('Roster', _href=URL("roster")))}}</li>
+      <li>{{=LI(A('Calendar', _href=URL("calendar")))}}</li>
+      <li>{{=LI(A('Hitting Partner List', _href=URL("hitting_partner_list")))}}</li>
+      <li>{{=LI(A('FAQ', _href=URL("faq")))}}</li>
+      <li>{{=LI(A('Contact', _href=URL("contact")))}}</li> 
+      {{ if auth.is_logged_in(): }} 
+         <li>{{=LI(A('Logout ', _href=URL('default', 'user', args='logout')))}}</li> 
+      {{ pass }}
+      {{ if not auth.is_logged_in(): }} 
+         <li>{{=LI(A('Login', _href=URL("user")))}}</li> 
+      {{ pass }}
+   </ul>
+
+</div>
+{{block body}}{{end}}
+</body>
+

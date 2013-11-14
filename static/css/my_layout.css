@@ -1,21 +1,67 @@
 /* this is css for my_layout.html which is in every page */
 /* style USCS page logo */
+
+/* Header CSS */
+
+#body{
+  background-color: #eaeaea;
+  height: 100%;
+}
+#header_container {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF;
+  /*border: solid #FBE05D;
+  border-bottom: 1% solid #FBE05D; 
+  border-top: 1% solid #FBE05D;*/
+  -moz-box-shadow: 0 0 5px 5px #888;
+  -webkit-box-shadow: 0 0 5px 5px#888;
+  box-shadow: 0 0 10px 10px #888;
+}
+
 #header {
 	height:150px;
 	background-color: #00458c;
 	text-align: center;
 }
 #title1 {
-	color: #FFFFFF;
+	color: #FBE05D;
 	font-size: 50px;
-	position:relative; top: 15px;
+	position:relative; top: 0px;
 }
 #title2 {
-	color: #FFFFFF;
+	color: #FBE05D;
 	font-size: 50px;
-	position:relative; bottom: 25px;
+	position:relative; bottom: 35px;
 }
 /*************************/
+
+
+/* Footer CSS */
+#footer_container {
+  width:1024px;
+  height:80px;
+  position:static;
+  bottom:0;
+  background: #00458c;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #FBE05D;
+}
+
+#footer_links li{
+  display: inline-block;
+  padding: 15px 15px;
+  color: #069;
+
+}
+#footer_links li a{
+  color: #FBE05D;
+}
+/**********************/
+
 /* Begin Navigation Bar Styling */
 #nav {
   width: 100%;

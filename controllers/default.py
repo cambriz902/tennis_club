@@ -13,8 +13,38 @@
 ## New pages added
 #########################################################################
 def roster():
-    message = T('this will show the roster for both teams')
-    return dict(message=message)
+    #query = ((auth.user.email == db.list.Assignee)
+     #       & ( (db.list.Accept == False)
+     #         & (db.list.Decline == False)
+     #         & (db.list.Completed == False)
+     #         & (db.list.Later == False)
+     #         )
+     #       )
+    posts = SQLFORM.grid(db.roster,
+             fields=[
+                     db.roster.Name,
+                     db.roster.studying,
+                     db.roster.year,
+                     db.roster.hometown,
+                     ],
+             deletable=True,
+             csv = False,
+             details = False,
+             create = True,
+             editable = True,
+             searchable = False,
+             upload = URL('download'),
+             #links=[dict(header=T('Edit Post'),body = lambda r:
+             #A('Edit', _class='btn', _href=URL('default', 'edit', args=[r.id])))]
+             )
+    return dict(posts=posts)
+
+def add_to_roster():
+    form = SQLFORM(db.roster)
+    if form.process().accepted:
+        redirect(URL('default', 'roster'))
+        session.flash = T('Inserted')
+    return dict(form=form)
 
 def calendar():
     message = T('This will show tournament schedule')

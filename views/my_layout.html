@@ -1,6 +1,12 @@
 <head>
-  {{response.files.append(URL('static', 'css/my_layout.css'))}}
+  <!-- include stylesheets -->
+  {{
+  response.files.append(URL('static', 'css/my_layout.css'))
+  }}
+
   {{include 'web2py_ajax.html'}}
+
+
   {{block head}}{{end}}
 </head>
 

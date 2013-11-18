@@ -12,9 +12,6 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #FFFFFF;
-  /*border: solid #FBE05D;
-  border-bottom: 1% solid #FBE05D; 
-  border-top: 1% solid #FBE05D;*/
   -moz-box-shadow: 0 0 5px 5px #888;
   -webkit-box-shadow: 0 0 5px 5px#888;
   box-shadow: 0 0 10px 10px #888;
@@ -41,7 +38,7 @@
 /* Footer CSS */
 #footer_container {
   width:1024px;
-  height:80px;
+  height:50px;
   position:static;
   bottom:0;
   background: #00458c;

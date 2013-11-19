@@ -1,0 +1,30 @@
+{{extend 'my_layout.html'}}
+
+{{block head}}
+  {{response.files.append(URL('static', 'css/faq.css'))}}
+  {{include 'web2py_ajax.html'}}
+{{end}}
+
+{{block body}}
+
+<div id="body_container">
+	<!-- FAQ title -->
+	<h1>Frequently Asked Questions</h1>
+	<!--            -->
+	<h3>How can I join the club?</h3>
+		<p>UC Santa Cruz Club Tennis is a selective team and we hold tryouts at the beginning of each school year. If you were not able to attend tryouts, send us an email and we may be able to set up another time for you to tryout.</p>
+
+	<h3>When are practices?</h3>
+		<p>Practices are held Monday-Friday from 5:30-6:30pm but some coordinate to practice at different times because of class conflicts. Practices are at <a href="http://opers.ucsc.edu/facilities/index.html">Opers East Field Tennis Courts</a>.</p>
+
+	<h3>Are practices mandatory?</h3>
+		<p>Members are encouraged to come to practice, but it is not required. Attendance at practice is considered for tournament roster selection, so if you want to play in tournaments come to as many practices as you can.</p>
+
+	<h3>Can anyone attend to club tennis practice?</h3>
+	  <p>Due to limited court space, club tennis practice is only open to members. Non-members are welcome to use our Hitting Partner List to find other players to practice with. There are also classes available given by the school to help you meet other players of similar level.</p>
+
+	<h3>When are tournaments?</h3>
+	  <p>The tournament schedule varies from year to year and our season runs from September to May. Tournaments are usually Saturday/Sunday and people on the team are required to go to as many as they can. Current tournament scheadule can be found on the home page of the site or on the calendar.</p>
+</div>
+
+{{end}}

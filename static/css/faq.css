@@ -1,0 +1,8 @@
+#body_container{
+	height: 850px;
+	width: 600px;
+	margin-left: 30px;
+}
+#body_container h1{
+	border-bottom: 2px solid gray;
+}

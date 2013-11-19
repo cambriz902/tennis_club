@@ -14,16 +14,15 @@
 
 }
 #body_container {
-	height:850px;
+	height: 500px;
 }
 #welcome_text {
-	float: left;
-  margin: 0;
-  width: 29%;
-  height: 300px;
-  border: solid #FBE05D;
-  border-bottom: 1% solid #FBE05D; 
-  border-top: 1% solid #FBE05D;
+	margin-left: 30px;
+  width: 600px;
+  height: 200px;
+}
+#welcome_text h1{
+	border-bottom: 2px solid gray;
 }
 #post {
 	float: left;

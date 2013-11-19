@@ -62,7 +62,7 @@ I00
 sg20
 S'text'
 p25
-ssS'studying'
+ssS'hometown'
 p26
 (dp27
 g14
@@ -70,7 +70,7 @@ I32768
 sg15
 I00
 sg16
-I4
+I5
 sg17
 S'TEXT'
 p28
@@ -78,7 +78,7 @@ sg19
 I00
 sg20
 g25
-ssS'hometown'
+ssS'studying'
 p29
 (dp30
 g14
@@ -86,7 +86,7 @@ I32768
 sg15
 I00
 sg16
-I5
+I4
 sg17
 S'TEXT'
 p31

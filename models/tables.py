@@ -30,6 +30,22 @@ db.define_table ('roster',
    Field('profile_pic', 'upload'),
    format = '%(Title)s')
 
+db.define_table ('hitting_partner_list',
+   Field(
+         'Username',
+         writable = False,
+         default  = get_name,
+         unique   = True
+         ),
+   Field(
+         'Email',
+         writable = False,
+         default  = get_email,
+         unique   = True
+         ),
+   Field('rating', 'double', default = 0.0),
+   format = '%(Title)s')
+
 db.roster.hometown.requires = IS_NOT_EMPTY()
 db.roster.year.requires  = IS_NOT_EMPTY()
 

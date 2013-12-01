@@ -12,33 +12,42 @@
 #########################################################################
 ## New pages added
 #########################################################################
+@auth.requires_login()
 def roster():
-    #query = ((auth.user.email == db.list.Assignee)
-     #       & ( (db.list.Accept == False)
-     #         & (db.list.Decline == False)
-     #         & (db.list.Completed == False)
-     #         & (db.list.Later == False)
-     #         )
-     #       )
-    posts = SQLFORM.grid(db.roster,
-             fields=[
-                     db.roster.Name,
-                     db.roster.studying,
-                     db.roster.year,
-                     db.roster.hometown,
-                     ],
-             deletable=True,
-             csv = False,
-             details = False,
-             create = True,
-             editable = True,
-             searchable = False,
-             upload = URL('download'),
-             #links=[dict(header=T('Edit Post'),body = lambda r:
-             #A('Edit', _class='btn', _href=URL('default', 'edit', args=[r.id])))]
-             )
+    if auth.user.email == "ucsantacruztennisclub@gmail.com":
+        posts = SQLFORM.grid(db.roster,
+                 fields=[
+                         db.roster.Name,
+                         db.roster.studying,
+                         db.roster.year,
+                         db.roster.hometown,
+                         ],
+                 deletable=True,
+                 csv = False,
+                 details = False,
+                 create = True,
+                 editable = True,
+                 searchable = False,
+                 )
+    else:
+        posts = SQLFORM.grid(db.roster,
+                     fields=[
+                             db.roster.Name,
+                             db.roster.studying,
+                             db.roster.year,
+                             db.roster.hometown,
+                             ],
+                     deletable=True,
+                     csv = False,
+                     details = False,
+                     create = False,
+                     editable = True,
+                     searchable = False,
+                     )
+    pass
     return dict(posts=posts)
 
+@auth.requires_login()
 def add_to_roster():
     form = SQLFORM(db.roster)
     if form.process().accepted:
@@ -50,9 +59,52 @@ def calendar():
     message = T('This will show tournament schedule')
     return dict(message=message)
 
+@auth.requires_login()
 def hitting_partner_list():
-    message = T('This will help people find hitting partners')
-    return dict(message=message)
+    if db(db.hitting_partner_list.Email == auth.user.email, db.hitting_partner_list.rating == 0.0).isempty() :
+        hpl_grid = SQLFORM.grid(db.hitting_partner_list,
+             fields=[
+                     db.hitting_partner_list.Username,
+                     db.hitting_partner_list.Email,
+                     db.hitting_partner_list.rating,
+                     ],
+             deletable=False,
+             csv = False,
+             details = False,
+             create = True,
+             editable = False,
+             searchable = False,
+             )
+    elif auth.user.email == "ucsantacruztennisclub@gmail.com":
+        hpl_grid = SQLFORM.grid(db.hitting_partner_list,
+             fields=[
+                     db.hitting_partner_list.Username,
+                     db.hitting_partner_list.Email,
+                     db.hitting_partner_list.rating,
+                     ],
+             deletable=True,
+             csv = False,
+             details = False,
+             create = False,
+             editable = True,
+             searchable = False,
+             )
+    else:
+        hpl_grid = SQLFORM.grid(db.hitting_partner_list,
+             fields=[
+                     db.hitting_partner_list.Username,
+                     db.hitting_partner_list.Email,
+                     db.hitting_partner_list.rating,
+                     ],
+             deletable=False,
+             csv = False,
+             details = False,
+             create = False,
+             editable = False,
+             searchable = False,
+             )
+    pass
+    return dict(hpl_grid=hpl_grid)
 
 def faq():
     message = T('This will answer frequently asked questions')

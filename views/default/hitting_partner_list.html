@@ -1,0 +1,24 @@
+{{extend 'my_layout.html'}}
+
+{{block head}}
+  {{response.files.append(URL('static', 'css/hitting_partner_list.css'))}}
+  {{include 'web2py_ajax.html'}}
+{{end}}
+
+{{block body}}
+
+<div id="body_container">
+	<h1>Hitting Partner List</h1>
+
+	<p>Have you ever wanted to go out and hit, but couldn't find someone of a similar tennis ability? If so, then this is the list for you. All you need to do is:<p>
+
+	<ol id="hpl_instructions">
+		<li>Estimate your own  <a href="http://www.usta.com/Adult-Tennis/USTA-League/Information/About_NTRP/">NTRP Rating</a></li>
+		<li>Add yourself to the list</li>
+		<li>Contact anyone on this list with a similar rating</li>
+	</ol>
+
+	<p>All UC Santa Cruz students, faculty, staff and alumni are eligible to join and use this list.</p>
+
+{{=hpl_grid}}
+</div>

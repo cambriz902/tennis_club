@@ -37,12 +37,12 @@ def roster():
                              db.roster.year,
                              db.roster.hometown,
                              ],
-                     deletable=True,
+                     deletable=False,
                      csv = False,
                      details = False,
                      create = False,
-                     editable = True,
-                     searchable = False,
+                     editable = False,
+                     searchable = True,
                      )
     pass
     return dict(posts=posts)
@@ -116,6 +116,16 @@ def contact():
 
 #########################################################################
 
+# User pages ############################################################
+def login():
+    return dict(form=auth.login())
+
+def register():
+     return dict(form=auth.register())  
+
+def resetpass():
+    return dict(form=auth.request_reset_password())  
+#########################################################################
 def index():
     """
     example action using the internationalization operator T and flash

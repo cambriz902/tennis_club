@@ -1,3 +1,14 @@
-{{extend 'layout.html'}}
-<h1>This is the contact.html template</h1>
-{{=BEAUTIFY(response._vars)}}
+{{extend 'my_layout.html'}}
+
+{{block head}}
+  {{response.files.append(URL('static', 'css/contact.css'))}}
+  {{include 'web2py_ajax.html'}}
+{{end}}
+
+{{block body}}
+
+<div id="body_contact">
+	<h2> Contact </h2>
+	<p>Please send questions to <a href="mailto:ucsantacruztennisclub@gmail.com">ucsantacruztennisclub@gmail.com</a></p>
+</div>
+{{end}}

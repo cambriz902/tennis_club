@@ -21,7 +21,7 @@
   width: 600px;
   height: 200px;
 }
-#welcome_text h1{
+#welcome_text h2{
 	border-bottom: 2px solid gray;
 }
 #post {

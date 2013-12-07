@@ -27,7 +27,6 @@ db.define_table ('roster',
    Field('year', 'text'),
    Field('studying', 'text'),
    Field('hometown', 'text'),
-   Field('profile_pic', 'upload'),
    format = '%(Title)s')
 
 db.define_table ('hitting_partner_list',
@@ -48,6 +47,7 @@ db.define_table ('hitting_partner_list',
 
 db.roster.hometown.requires = IS_NOT_EMPTY()
 db.roster.year.requires  = IS_NOT_EMPTY()
+db.roster.Name.requires = IS_NOT_EMPTY()
 
 
 

@@ -116,7 +116,6 @@ def contact():
 
 #########################################################################
 
-
 def index():
     """
     example action using the internationalization operator T and flash

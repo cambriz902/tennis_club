@@ -1,0 +1,11 @@
+/*This is the css for the contact page of the site*/
+#body_contact{
+	height: 850px;
+	width: 600px;
+	margin-left: 30px;
+}
+
+#body_contact h2{
+	border-bottom: 2px solid gray;
+}
+/******************************/

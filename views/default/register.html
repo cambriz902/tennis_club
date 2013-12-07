@@ -1,6 +1,15 @@
-{{extend 'layout.html'}}
- 
-<div id="reset_password">
+{{extend 'my_layout.html'}}
+
+<!--                     -->
+{{block head}}
+	{{response.files.append(URL('static', 'css/web2py_bootstrap_nojs.css'))}}
+  {{response.files.append(URL('static', 'css/register.css'))}}
+  {{include 'web2py_ajax.html'}}
+{{end}}
+
+<!-- code after navigation -->
+{{block body}} 
+<div id="body_container">
  
 Please fill the form
  
@@ -8,3 +17,4 @@ Please fill the form
 {{=form}}
  
 </div>
+{{end}}

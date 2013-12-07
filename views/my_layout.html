@@ -31,7 +31,7 @@
         <li>{{=LI(A('Logout ', _href=URL('default', 'user', args='logout')))}}</li> 
           {{ pass }}
           {{ if not auth.is_logged_in(): }} 
-        <li>{{=LI(A('Login', _href=URL("user")))}}</li> 
+        <li>{{=LI(A('Login', _href=URL("login")))}}</li> 
           {{ pass }}
     </ul>
   </div>

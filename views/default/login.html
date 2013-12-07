@@ -1,10 +1,30 @@
-{{extend 'layout.html'}}
- 
-<div id="login_form">
+<!-- load the navigation -->
+{{extend 'my_layout.html'}}
+
+<!--                     -->
+{{block head}}
+	{{response.files.append(URL('static', 'css/web2py_bootstrap_nojs.css'))}}
+  {{response.files.append(URL('static', 'css/login.css'))}}
+  {{include 'web2py_ajax.html'}}
+{{end}}
+
+<!-- code after navigation -->
+{{block body}}
+<div id="body_container">
  
 Please fill the form
  
  
 {{=form}}
- 
+<div class="reg_respass_pos">
+	<div class="btn">
+		{{=(A('Register', _href=URL("register")))}}
+	</div>
+	<div class="btn">
+		{{=(A('Reset-Password', _href=URL("resetpass")))}}
+	</div>	
 </div>
+
+</div>
+
+{{end}}

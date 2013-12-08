@@ -1,5 +1,5 @@
 #body_container{
-	height: 850px;
+	height: 100% + 100px;
 	width: 600px;
 	margin-left: 30px;
 }

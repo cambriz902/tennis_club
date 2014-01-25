@@ -9,6 +9,11 @@ td.w2p_fl {text-align:left}
 td.w2p_fl, td.w2p_fw {padding-right:7px}
 td.w2p_fl,td.w2p_fc {padding-top:4px}
 
+.btn a{
+	text-decoration: none;
+	color: black;
+}
+
 .btn{
 text-decoration: none;
 margin-left: 5px;
